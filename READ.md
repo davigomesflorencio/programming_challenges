@@ -1,1 +1,0 @@
-# Repositorio da disciplina de Desafios de Programação
