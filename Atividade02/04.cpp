@@ -32,7 +32,7 @@ public:
         
         while(l < r) {
             int mid = l + (r - l) / 2;
-            // cout<< "mid "<< mid << " l :" << l << " r:" << r <<endl;
+            cout<< "mid:"<< mid << " l:" << l << " r:" << r <<endl;
             if(count(weights, mid) > days) l = mid + 1;
             else r = mid;
         }
