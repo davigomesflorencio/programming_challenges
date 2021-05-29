@@ -15,15 +15,14 @@ public:
     int minAddToMakeValid(string s) {
         int res=0;
         stack<int> st;
-        // st.push(s[0]);
-        for(int i=0;i<s.size();i++){ 
+        for(auto x:s){ 
             if(st.empty()){
-                st.push(s[i]);
+                st.push(x);
             }else{
-                if(s[i]==')' && st.top()=='('){
+                if(x==')' && st.top()=='('){
                     st.pop();
                 }else{
-                    st.push(s[i]);
+                    st.push(x);
                 }
             }
         }
@@ -33,7 +32,7 @@ public:
 
 int main(int argc, char const *argv[]){
     Solution so;
-    string v="((())))))((";
+    string v="))((";
     int ola = so.minAddToMakeValid(v);
 
     cout << ola << " ";

@@ -18,14 +18,14 @@ private:
 public:
     string removeOuterParentheses(string s) {
         
-        for(int i=0;i<s.size();i++){
-            if (s[i] == '('){
-                pilha.push(s[i]);
+        for(auto x:s){
+            if (x == '('){
+                pilha.push(x);
             } 
-            if (!pilha.empty()){
-                res += s[i];
+            if (pilha.size() > 1){
+                res += x;
             }
-            if (s[i] == ')'){ 
+            if (x == ')'){ 
                 pilha.pop();
             }
         }
@@ -37,7 +37,7 @@ public:
 int main(int argc, char const *argv[])
 {
     Solution so;
-    string x="(()(()))";
+    string x="()(())";
     string ola = so.removeOuterParentheses(x);
 
     cout << ola << " ";

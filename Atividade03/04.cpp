@@ -19,7 +19,7 @@ public:
         }
         stack<char> st;
         for(auto x:s){
-            if(!st.empty() && abs(x- st.top()) == 32){
+            if(!st.empty() && abs(st.top()-x) == 32){
                 st.pop();
             }else{
                 st.push(x);
@@ -46,7 +46,7 @@ public:
 int main(int argc, char const *argv[])
 {
     Solution so;
-    string v="abBAcC";
+    string v="bBAcC";
     string ola = so.makeGood(v);
 
 
