@@ -43,5 +43,6 @@ int main()
     int k = so.findMaxConsecutiveOnes(vec);
 
     cout << "k " << k << endl;
+    
     return 0;
 }
